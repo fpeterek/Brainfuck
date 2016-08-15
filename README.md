@@ -1,4 +1,4 @@
-# brainfuck
+# Brainfuck
 Brainfuck interpreter written in C++
 
 
