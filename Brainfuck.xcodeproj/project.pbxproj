@@ -1,0 +1,253 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EB5ADCB1D5F5B53009B0A15 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5ADCA1D5F5B53009B0A15 /* main.cpp */; };
+		4EB5ADD31D5F5BA7009B0A15 /* bf_interpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5ADD11D5F5BA7009B0A15 /* bf_interpreter.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EB5ADC51D5F5B53009B0A15 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4EB5ADC71D5F5B53009B0A15 /* Brainfuck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Brainfuck; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB5ADCA1D5F5B53009B0A15 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4EB5ADD11D5F5BA7009B0A15 /* bf_interpreter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bf_interpreter.cpp; sourceTree = "<group>"; };
+		4EB5ADD21D5F5BA7009B0A15 /* bf_interpreter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = bf_interpreter.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EB5ADC41D5F5B53009B0A15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EB5ADBE1D5F5B53009B0A15 = {
+			isa = PBXGroup;
+			children = (
+				4EB5ADC91D5F5B53009B0A15 /* Brainfuck */,
+				4EB5ADC81D5F5B53009B0A15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EB5ADC81D5F5B53009B0A15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EB5ADC71D5F5B53009B0A15 /* Brainfuck */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EB5ADC91D5F5B53009B0A15 /* Brainfuck */ = {
+			isa = PBXGroup;
+			children = (
+				4EB5ADCA1D5F5B53009B0A15 /* main.cpp */,
+				4EB5ADD11D5F5BA7009B0A15 /* bf_interpreter.cpp */,
+				4EB5ADD21D5F5BA7009B0A15 /* bf_interpreter.hpp */,
+			);
+			path = Brainfuck;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EB5ADC61D5F5B53009B0A15 /* Brainfuck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB5ADCE1D5F5B53009B0A15 /* Build configuration list for PBXNativeTarget "Brainfuck" */;
+			buildPhases = (
+				4EB5ADC31D5F5B53009B0A15 /* Sources */,
+				4EB5ADC41D5F5B53009B0A15 /* Frameworks */,
+				4EB5ADC51D5F5B53009B0A15 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brainfuck;
+			productName = Brainfuck;
+			productReference = 4EB5ADC71D5F5B53009B0A15 /* Brainfuck */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EB5ADBF1D5F5B53009B0A15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Filip Peterek";
+				TargetAttributes = {
+					4EB5ADC61D5F5B53009B0A15 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4EB5ADC21D5F5B53009B0A15 /* Build configuration list for PBXProject "Brainfuck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4EB5ADBE1D5F5B53009B0A15;
+			productRefGroup = 4EB5ADC81D5F5B53009B0A15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EB5ADC61D5F5B53009B0A15 /* Brainfuck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EB5ADC31D5F5B53009B0A15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB5ADD31D5F5BA7009B0A15 /* bf_interpreter.cpp in Sources */,
+				4EB5ADCB1D5F5B53009B0A15 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4EB5ADCC1D5F5B53009B0A15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4EB5ADCD1D5F5B53009B0A15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4EB5ADCF1D5F5B53009B0A15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4EB5ADD01D5F5B53009B0A15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EB5ADC21D5F5B53009B0A15 /* Build configuration list for PBXProject "Brainfuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB5ADCC1D5F5B53009B0A15 /* Debug */,
+				4EB5ADCD1D5F5B53009B0A15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB5ADCE1D5F5B53009B0A15 /* Build configuration list for PBXNativeTarget "Brainfuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB5ADCF1D5F5B53009B0A15 /* Debug */,
+				4EB5ADD01D5F5B53009B0A15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EB5ADBF1D5F5B53009B0A15 /* Project object */;
+}
