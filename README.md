@@ -18,3 +18,5 @@ After the file is interpreted or if no/invalid parameter has been passed to the 
 The live interpreter is similar to eg. Python, Lua or Lisp live interpreters. Type in the code you want interpreted and press enter. To exit the live interpreter, type in "exit" (no whitespaces or other characters, otherwise it will be ignored). To reset the live interpret to it's initial value, type in "reset" (again, no other characters are allowed).
 
 The interpreter is not reset after interpreting a file. If you want the interpreter to reset, you will have to do so manually.
+
+Live interpreter displays "$ " to indicate when the user can use it. I've decided to use "$" instead of ">" to avoid confusion. While it is ok in Python or Lua interpreters, it could be slightly confusing in Brainfuck.
