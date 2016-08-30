@@ -289,6 +289,7 @@ Status Brainfuck::LiveInterpreter() {
     
     while (true) {
         
+        std::cout << "$ ";
         std::getline(std::cin, _input);
         
         if (_input == "exit")   return Status::Exit;
