@@ -13,16 +13,36 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <sstream>
+
+#define ARRAY_SIZE 30000
 
 
-/* An exception, which is thrown, when the interpreter finds an opening bracket '[' without a matching closing bracket ']' */
+/* An exception, which is thrown, whenever the interpreter finds an opening bracket '[' without a matching closing bracket ']' */
 
-typedef std::exception MissingBracketException;
+class MissingBracketException : std::exception {
+    
+    unsigned long long _unclosedBracketPosition;
+    
+public:
+    
+    MissingBracketException(unsigned long long);
+    std::string Message();
+    
+};
+
+
+enum Status {
+    
+    Exit,
+    Continue
+    
+};
 
 
 class Brainfuck {
     
-    unsigned char _array[30000];
+    unsigned char _array[ARRAY_SIZE];
     unsigned char * _ptr;
     long long _iter;
     std::string _input;
@@ -31,6 +51,7 @@ class Brainfuck {
     void InterpretLoop();
     void Interpret();
     void InterpretToken(const char token);
+    void Reset();
     
     void IncrementPtr();
     void DecrementPtr();
@@ -43,7 +64,7 @@ public:
     
     Brainfuck();
     
-    void LiveInterpreter();
+    Status LiveInterpreter();
     void InterpretFromFile(std::string & filename);
     
 };

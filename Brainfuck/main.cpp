@@ -15,19 +15,43 @@ int main(int argc, const char * argv[]) {
     
     Brainfuck bf;
     
-    /* If the program receives a filename as a parameter, interpret the file, otherwise open a live interpreter. */
+    /* If the program receives a filename as a parameter, interpret the file, then open a live interpreter */
     
     if (argc > 1) {
     
-        std::string file = argv[1];
-        bf.InterpretFromFile(file);
+        try {
+            
+            std::string file = argv[1];
+            bf.InterpretFromFile(file);
+            
+        } catch (MissingBracketException e) {
+            
+            std::cout << e.Message() << std::endl;
+            
+        }
         
     }
     
-    else {
-        
-        bf.LiveInterpreter();
-        
+    Status status = Status::Continue;
+    
+    /* 
+        Exit the interpreter if the user types in "exit"
+     
+        If an exception is thrown, the interpreter is reset (this is done before the exception is thrown) and it keeps on looping
+     */
+    
+    while (status == Status::Continue) {
+    
+        try {
+            
+            status = bf.LiveInterpreter();
+            
+        } catch (MissingBracketException e) {
+            
+            std::cout << e.Message() << std::endl;
+            
+        }
+            
     }
      
     return 0;

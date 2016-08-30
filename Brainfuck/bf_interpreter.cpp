@@ -9,12 +9,51 @@
 #include "bf_interpreter.hpp"
 
 
+/************************************************************************************************************************************/
+/*                                                                                                                                  */
+/*                                                         ---------------                                                          */
+/*                                                         -- Exception --                                                          */
+/*                                                         ---------------                                                          */
+/*                                                                                                                                  */
+/************************************************************************************************************************************/
+
+MissingBracketException::MissingBracketException(unsigned long long bracketPos) {
+    
+    _unclosedBracketPosition = bracketPos;
+    
+}
+
+std::string MissingBracketException::Message() {
+    
+    /* Use stringstream to create an error message from a string literal and an unsigned long long */
+    
+    std::stringstream s;
+    
+    s << "Unclosed bracked at index ";
+    s << _unclosedBracketPosition;
+    
+    return s.str();
+    
+}
+
+
+/************************************************************************************************************************************/
+/*                                                                                                                                  */
+/*                                                   ---------------------------                                                    */
+/*                                                   -- Brainfuck Interpreter --                                                    */
+/*                                                   ---------------------------                                                    */
+/*                                                                                                                                  */
+/************************************************************************************************************************************/
+
+
 Brainfuck::Brainfuck() {
     
     _ptr = _array;
     _input = "";
     
 }
+
+/* Self explanatory */
 
 void Brainfuck::IncrementPtr() {
     
@@ -139,13 +178,21 @@ long long Brainfuck::FindLoopEnd(std::string str) {
         
     }
     
-    if (loopEnd == -1) throw MissingBracketException();
+    if (loopEnd == -1) {
+    
+        /* Save iterator position before resetting the interpreter */
+        
+        unsigned long long iterPos = _iter;
+        Reset();
+        throw MissingBracketException(iterPos);
+    
+    }
     
     return loopEnd;
     
 }
 
-/* Calls corresponding function for each Brainfuck operator, ignores every other character */
+/* Calls corresponding method for each Brainfuck operator, ignores every other character */
 
 void Brainfuck::InterpretToken(const char token) {
     
@@ -186,6 +233,21 @@ void Brainfuck::InterpretToken(const char token) {
     
 }
 
+/* Resets the interpreter to it's initial state */
+
+void Brainfuck::Reset() {
+    
+    for (int i = 0; i < ARRAY_SIZE; ++i) {
+        
+        _array[i] = 0;
+        
+    }
+    
+    _ptr = _array;
+    _iter = 0;
+    
+}
+
 /* Whenever InterpretToken() finds a loop, this method executes it and then sets the iterator at the end of the loop so the code 
     can continue normally */
 
@@ -223,13 +285,14 @@ void Brainfuck::Interpret() {
 
 /* Reads line from stdin and passes it to the interpreter unless the input is equal to 'exit', in which case the programs quits */
 
-void Brainfuck::LiveInterpreter() {
+Status Brainfuck::LiveInterpreter() {
     
     while (true) {
         
         std::getline(std::cin, _input);
         
-        if (_input == "exit") return;
+        if (_input == "exit")   return Status::Exit;
+        if (_input == "reset")  Reset();
         
         Interpret();
         
