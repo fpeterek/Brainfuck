@@ -23,7 +23,7 @@ MissingBracketException::MissingBracketException(unsigned long long bracketPos) 
     
 }
 
-std::string MissingBracketException::Message() {
+const char * MissingBracketException::what() {
     
     /* Use stringstream to create an error message from a string literal and an unsigned long long */
     
@@ -32,7 +32,7 @@ std::string MissingBracketException::Message() {
     s << "Unclosed bracked at index ";
     s << _unclosedBracketPosition;
     
-    return s.str();
+    return s.str().c_str();
     
 }
 
