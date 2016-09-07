@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
             
         } catch (MissingBracketException e) {
             
-            std::cout << e.Message() << std::endl;
+            std::cout << e.what() << std::endl;
             
         }
         
@@ -48,7 +48,7 @@ int main(int argc, const char * argv[]) {
             
         } catch (MissingBracketException e) {
             
-            std::cout << e.Message() << std::endl;
+            std::cout << e.what() << std::endl;
             
         }
             
