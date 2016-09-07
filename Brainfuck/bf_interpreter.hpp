@@ -27,7 +27,7 @@ class MissingBracketException : std::exception {
 public:
     
     MissingBracketException(unsigned long long);
-    std::string Message();
+    const char * what();
     
 };
 
